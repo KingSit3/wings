@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('product_name', 30);
             $table->decimal('price', 6, 0);
             $table->string('currency', 5);
-            $table->decimal('discount', 6, 0);
+            $table->decimal('discount', 6, 0)->nullable();
             $table->string('dimension', 50);
             $table->string('unit', 5);
             $table->timestamps();

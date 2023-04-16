@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('document_code', 3);
             $table->string('document_number', 10);
-            $table->foreignIdFor(Product::class);
+            $table->foreignId('product_id')->constrained('product');
             $table->decimal('price', 6, 0);
             $table->integer('quantity');
             $table->string('unit', 5);

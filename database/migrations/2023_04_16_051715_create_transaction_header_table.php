@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('document_code', 3);
             $table->string('document_number', 10);
             $table->date('date');
-            $table->foreignIdFor(User::class);
+            $table->foreignId('user_id')->constrained('users');
             $table->decimal('total', 10, 0);
             $table->timestamps();
         });
